@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function SidebarItem() {
-  return <button className="sidebar-item active">sidebar Item</button>;
+  return <button className="sidebar-item">sidebar Item</button>;
 }
