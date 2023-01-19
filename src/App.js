@@ -100,25 +100,30 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <div className="main-image" style={getImageStyle()} />
-      <div className="sidebar">
-        {options.map((option, index) => (
-          <SidebarItem
-            key={index}
-            name={option.name}
-            active={index === selectedOptionIndex}
-            handleClick={() => setSelectedOptionIndex(index)}
-          />
-        ))}
+    <>
+      <div className="title" style={{ padding: "1rem", margin: "1rem" }}>
+        TEST THE FUNCTIONALITIES
       </div>
-      <Slider
-        min={selectedOption.range.min}
-        max={selectedOption.range.max}
-        value={selectedOption.value}
-        handleChange={handleSliderChange}
-      />
-    </div>
+      <div className="container">
+        <div className="main-image" style={getImageStyle()} />
+        <div className="sidebar">
+          {options.map((option, index) => (
+            <SidebarItem
+              key={index}
+              name={option.name}
+              active={index === selectedOptionIndex}
+              handleClick={() => setSelectedOptionIndex(index)}
+            />
+          ))}
+        </div>
+        <Slider
+          min={selectedOption.range.min}
+          max={selectedOption.range.max}
+          value={selectedOption.value}
+          handleChange={handleSliderChange}
+        />
+      </div>
+    </>
   );
 }
 
